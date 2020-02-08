@@ -9,6 +9,8 @@ namespace LittleThingsWebsite
 {
     public partial class _Default : Page
     {
+        Models.LittleThingsRepository Repository = new Models.LittleThingsRepository();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
