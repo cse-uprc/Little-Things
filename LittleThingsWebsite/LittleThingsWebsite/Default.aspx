@@ -2,6 +2,18 @@
 
 <html>
     <body>
-        <p>Lorem ipsum</p>
+        <form id="form1" runat="server">
+        <h1>Users</h1>
+            <p>
+                <asp:GridView ID="UserGridView" runat="server">
+                </asp:GridView>
+            </p>
+            <h1>Habits</h1>
+            <p>
+                <asp:GridView ID="HabitGridView" runat="server">
+                </asp:GridView>
+            </p>
+        </form>
+          
     </body>
 </html>
