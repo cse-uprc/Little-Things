@@ -11,6 +11,20 @@ namespace LittleThingsWebsite.Models
     {
         private LittleThingsContext _Context = new LittleThingsContext();
 
+        public IQueryable<User> GetUsers()
+        {
+            return _Context.Users;
+        }
+        public IQueryable<Habit> GetHabits()
+        {
+            return _Context.Habits;
+        }
+
+        public IQueryable<HabitCompletion> GetCompletedHabits()
+        {
+            return _Context.CompletedHabits;
+        }
+
         public bool AddUserToContext(User theUser)
         {
             bool HabitsWereAddedToTheContext = false;
@@ -47,10 +61,7 @@ namespace LittleThingsWebsite.Models
             if (!TheHabitExistsInUser(theHabit, theUser))
             {
                 theUser.Habits.Add(theHabit);
-                bool ContextWasModified = AddHabitToContext(theHabit);
-
-                if (!ContextWasModified)
-                    _Context.SaveChanges();
+                theHabit.User = theUser;
 
                 return true;
             }

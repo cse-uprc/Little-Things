@@ -8,10 +8,13 @@ namespace LittleThingsWebsite.Models
 {
     public class User
     {
+        public User()
+        {
+            Habits = new List<Habit>();
+        }
+
         public int UserID { get; set; }
         public string UserName { get; set; }
         public string UserPhrase { get; set; }
-
-        public ICollection<Habit> Habits { get; set; }
     }
 }

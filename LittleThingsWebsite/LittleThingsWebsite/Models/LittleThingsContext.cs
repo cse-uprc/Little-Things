@@ -23,13 +23,6 @@ namespace LittleThingsWebsite.Models
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<LittleThingsContext>());
         }
 
-        //protected IMongoQueryable<User> GetUsers()
-        //{
-        //    using MongoDB.Driver.Linq;
-
-        //    database.GetCollection("Users").Find
-        //}
-
         public DbSet<User> Users { get; set; }
         public DbSet<Habit> Habits { get; set; }
         public DbSet<HabitCompletion> CompletedHabits { get; set; }

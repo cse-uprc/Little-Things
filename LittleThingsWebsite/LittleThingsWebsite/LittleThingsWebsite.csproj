@@ -209,7 +209,6 @@
     <Compile Include="Models\Habit.cs" />
     <Compile Include="Models\HabitCompletion.cs" />
     <Compile Include="Models\LittleThingsContext.cs" />
-    <Compile Include="Models\LittleThingsContextInitializer.cs" />
     <Compile Include="Models\LittleThingsRepository.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

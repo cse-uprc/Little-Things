@@ -8,6 +8,8 @@ namespace LittleThingsWebsite.Models
 {
     public class HabitCompletion
     {
+        public int HabitCompletionID { get; set; }
+
         [ForeignKey("User")]
         public int UserID { get; set; }
         public User User { get; set; }
